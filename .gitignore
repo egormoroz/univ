@@ -1,0 +1,4 @@
+*.obj
+*.exe
+fluff/__pycache__
+__pycache__
