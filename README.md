@@ -11,3 +11,8 @@
 - factorial.cpp - Compile-time factorial
 - cringe.cpp - Sample fstream usage (from a lecture)
 - sort.cpp - sorts algs from a lecture (bubble, insertion, selection sort algs)
+
+# OOP
+- line.cpp - Implements 2d point struct and checker if 3 poitns lie on the same line
+- vec.cpp - Simple 2d vector implementation
+
