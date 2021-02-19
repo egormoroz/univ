@@ -8,24 +8,40 @@ class String {
     int len = 0;
 public:
     String() = default;
-    String(const char* s) {
-        len = strlen(s);
+    String(const char* s, int n=-1) {
+        if (n != -1)
+            len = n;
+        else
+            len = strlen(s);
         data = new char[len + 1];
         memcpy(data, s, len + 1);
     }
-
     explicit String(int n, char ch)
         : len(n), data(new char[n + 1]) {
         memset(data, ch, len);
         data[len] = 0;
     }
-
     String(String&& other)
         : data(exchange(other.data, nullptr)), len(exchange(other.len, 0)) {
     }
     String(const String& other)
-        : data(new char[len + 1]), len(other.len) {
-        memcpy(data, other.data, len + 1);
+        : String(other.data, other.len)
+    {}
+
+    void append(const char *s, int n=-1) {
+        if (n == -1)
+            n = strlen(s);
+        char *buf = new char[len+n+1];
+        memcpy(buf, data, len);
+        memcpy(buf + len, s, n+1);
+        if (data)
+            delete[] data;
+        data = buf;
+        len += n;
+    }
+
+    void append(const String &other) {
+        append(other.data, other.len);
     }
 
     void clear() {
@@ -72,6 +88,8 @@ ostream& operator<<(ostream& out, const String& s) {
 
 int main() {
     String a = "hello world", b(5, 'Z');
-    cout << a << '\n' << b;
+    a.append(b);
+    a.append("\nyeaaaah");
+    cout << a;
 }
 
