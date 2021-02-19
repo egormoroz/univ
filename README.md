@@ -16,4 +16,5 @@
 # OOP
 - line.cpp - Implements 2d point struct and checker if 3 poitns lie on the same line
 - vec.cpp - Simple 2d vector implementation
+- str.cpp - Simple string implementation
 
