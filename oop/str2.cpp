@@ -4,7 +4,7 @@
 #include <cstdint>
 using namespace std;
 
-//rounds to next power of 2
+//rounds to the next power of 2
 constexpr uint32_t align(uint32_t n) noexcept {
     n--;
     n |= n >> 1;
