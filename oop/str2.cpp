@@ -43,14 +43,6 @@ class String {
         return t;
     }
 
-    void free() {
-        if (u.b[N] < 0) {
-            delete[] u.a.data;
-            u.b[0] = 0;
-            u.b[N] = N;
-        }
-    }
-
 public:
     String() noexcept {
         memset(&u, 0, sizeof(u));
