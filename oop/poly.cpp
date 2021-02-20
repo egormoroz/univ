@@ -48,7 +48,7 @@ struct Circle : public Shape {
     float radius;
     Vec2f center;
 protected:
-    virtual void draw(Surface &surf) const {
+    virtual void draw(Surface &surf) const override {
         //...
     }
 };
@@ -57,7 +57,7 @@ struct Rectangle : public Shape {
     RectF bounds;
     Color color;
 protected:
-    virtual void draw(Surface &surf) const {
+    virtual void draw(Surface &surf) const override {
         //...
     }
 };
@@ -67,7 +67,7 @@ struct Sprite : public Drawable {
     RectI bounds;
 
 protected:
-    virtual void draw(Surface &surf) const override {
+    virtual void draw(Surface &surf) const final {
         //...
     }
 };
