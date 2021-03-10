@@ -19,4 +19,5 @@
 - str.cpp - Simple string implementation
 - str2.cpp - String w/ SSO and better growth
 - poly.cpp - Example of inheritance and polymorphism
+- array.cpp - Dynamicly growing array
 
