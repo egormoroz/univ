@@ -4,21 +4,21 @@
 #include <cwchar>
 
 Roots solve(double a, double b, double c) {
-	b /= a;
-	c /= a;
-	double d = b * b - 4 * c;
-	if (d >= 0)
-		return Roots{ false, (-b + sqrt(d)) / 2, (-b - sqrt(d)) / 2 };
-	return Roots{ true, -b / 2, sqrt(-d)/2 };
+    b /= a;
+    c /= a;
+    double d = b * b - 4 * c;
+    if (d >= 0)
+        return Roots{ false, (-b + sqrt(d)) / 2, (-b - sqrt(d)) / 2 };
+    return Roots{ true, -b / 2, sqrt(-d)/2 };
 }
 
 void remove_whitespace(wchar_t* p) {
-	const wchar_t* q = p;
-	while (*p) {
-		while (*q == L' ')
-			++q;
-		*(p++) = *(q++);
-	}
+    const wchar_t* q = p;
+    while (*p) {
+        while (*q == L' ')
+            ++q;
+        *(p++) = *(q++);
+    }
 }
 
 struct EPart {

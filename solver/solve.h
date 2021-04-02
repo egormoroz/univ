@@ -1,6 +1,6 @@
 struct Roots {
-	bool complex;
-	double r1, r2;
+    bool complex;
+    double r1, r2;
 };
 
 Roots solve(double a, double b, double c);
