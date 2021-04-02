@@ -22,7 +22,7 @@
 - array.cpp - Dynamicly growing array
 
 # DM
-- a.cpp simple implementation of BFS and DFS
+- search.cpp simple implementation of BFS and DFS
 
 # solver
 Simple solver of quadratic equations (parser + solver) w/ GUI written in winapi
